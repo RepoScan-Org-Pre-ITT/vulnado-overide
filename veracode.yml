@@ -19,7 +19,7 @@ veracode_sca_scan:
   push:
     trigger: false
   pull_request:
-    trigger: true
+    trigger: false
     target_branch:
       - default_branch
   issues: {}
