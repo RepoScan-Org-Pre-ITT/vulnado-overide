@@ -10,12 +10,18 @@ veracode_static_scan:
       - default_branch
   issues:
     trigger: true
-  analysis_on_platform: true
+  analysis_on_platform: false
+  create_issue: false
+  create_code_scanning_alert: false
+  break_build_policy_findings: true
+  break_build_on_error: true
 veracode_sca_scan:
   push:
     trigger: false
   pull_request:
-    trigger: false
+    trigger: true
+    target_branch:
+      - default_branch
   issues: {}
 veracode_iac_secrets_scan:
   push:
